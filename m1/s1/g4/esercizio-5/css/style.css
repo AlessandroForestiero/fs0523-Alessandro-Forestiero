@@ -1,0 +1,106 @@
+/* IMPOSTAZIONI GENERALI */
+.pagina{
+    margin: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+    
+
+
+/* HEADER */
+.testa{
+    padding: 20px;
+    background-color: aqua;
+}
+.logo{
+    text-align: center;
+}
+
+.font-head{
+    text-transform:uppercase;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+    }
+
+.barra{
+    text-align: center;
+        
+}
+.ok{
+    padding: 20px;
+    color: white;
+   }
+   .pad{
+    padding:5px;
+   }
+h1{
+    font-weight:bolder;
+    font-size:x-large;
+}
+h2{
+    font-weight: bolder;
+    font-size: large;
+    color:rgb(77, 76, 76) ;
+}
+#author {
+    display: block;
+    color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    margin-top: 1rem;}
+    .padd{
+        padding-top: 13px;
+        padding-bottom: 13px;
+    }
+    .titolotabella{
+        font-style: italic;
+        font-weight: bolder;
+    }
+    .testatab{
+      background-color: aqua;
+    }   
+    .spaziotab{
+        padding: 10px;
+    }
+    .borditab{
+        border: 2px solid black;
+        border-collapse: separate;
+        border-spacing: 2px;
+    }
+    .rotondo{
+        border-radius: 5%;
+        width:100%;
+        }
+        .newsletter{
+            background-color: rgb(173, 172, 172);
+            text-align: center;
+        }
+        .input{
+            border-bottom: 1px ;
+            border-bottom-style: dashed;
+        }
+        .colorbutton
+        {
+            background-color: blue;
+            color: white;
+            font-weight:bolder;
+        }
+        .paddone{
+            padding-top: 40px;
+            text-align: center;
+        }
+        .grigio{
+            background-color:rgb(173, 172, 172);
+            padding-top: 10px;
+            padding-bottom: 10px
+            ;
+        }
+/* MAIN */
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+
+/* TABELLE */
+
+/* FORM */
+
+/* ELEMENTI NELL' ASIDE */
+
+/* FOOTER */
