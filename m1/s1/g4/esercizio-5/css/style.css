@@ -1,15 +1,25 @@
 /* IMPOSTAZIONI GENERALI */
-.pagina{
-    margin: 15px;
-    font-family: 'Poppins', sans-serif;
-}
+
+body{
     
+    font-family: 'Poppins', sans-serif;
+    font-weight:400;
+    line-height: 1.8rem;
+    padding: 15px;
+    background-image:url(../assets/img/sfondo.png);
+}
+.container{
+    background-color: white;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}   
 
 
 /* HEADER */
 .testa{
-    padding: 20px;
-    background-color: aqua;
+    padding: 30px;
+    background-image:linear-gradient(180deg, rgba(0,160,198,1) 0%, rgba(3,109,134,1) 68%)
 }
 .logo{
     text-align: center;
@@ -18,64 +28,97 @@
 .font-head{
     text-transform:uppercase;
     font-weight: bolder;
-    font-family: 'Poppins', sans-serif;
+    color: white;
+    padding-top: 20px;
+    text-align: center;
+    
+    ;
     }
 
-.barra{
-    text-align: center;
-        
+       .font-head a {
+        color: white;
+        text-decoration: none;
+       }
+h1,h2,h3{
+    font-family:'poppins',sans-serif;
+    font-weight:700;
+
 }
-.ok{
-    padding: 20px;
-    color: white;
+   h1{
+    font-size: 1.5rem;
+    line-height:3rem;
+    padding-top: 18px;
    }
-   .pad{
-    padding:5px;
-   }
-h1{
-    font-weight:bolder;
-    font-size:x-large;
-}
-h2{
+
+   h2{
     font-weight: bolder;
     font-size: large;
     color:rgb(77, 76, 76) ;
 }
+
 #author {
     display: block;
     color: rgba(0, 0, 0, 0.4);
     text-align: center;
     margin-top: 1rem;}
-    .padd{
-        padding-top: 13px;
-        padding-bottom: 13px;
-    }
+    
+    ul:not(#menu){
+    list-style-type:disc;
+    padding-left:30px ;
+ }   
+ ol:not(#menu){
+    list-style-type:decimal;
+    padding-left:30px;
+    padding-bottom:20px ;
+ }   
+ p{
+    margin-bottom: 1em;
+ }
+ 
+
     .titolotabella{
         font-style: italic;
         font-weight: bolder;
+        
     }
-    .testatab{
-      background-color: aqua;
-    }   
-    .spaziotab{
-        padding: 10px;
+    .table thead tr{
+        background-color: aqua;
     }
-    .borditab{
-        border: 2px solid black;
-        border-collapse: separate;
-        border-spacing: 2px;
-    }
+    .table{
+        width: 100%;
+        text-align: center;}
+        
+        .table thead th{
+            padding: 30px;
+            color: white;
+            border-left: 1px solid white;
+        }
+        .table tbody td{
+            padding: 20px 30px;
+        }
+        .table tbody tr:nth-last-of-type(even){
+            background-color: #ccc;
+            border-top: 1px solid #808080;
+            border-bottom: 1px solid #808080;}
+    
     .rotondo{
         border-radius: 5%;
         width:100%;
         }
         .newsletter{
-            background-color: rgb(173, 172, 172);
+            background-color:#ccc ;
             text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin: 15px;
         }
         .input{
             border-bottom: 1px ;
-            border-bottom-style: dashed;
+            border-bottom-style: dashed;}
+            
+        .leftbutton{
+            text-align: left;
+            padding-left:15px;
         }
         .colorbutton
         {
@@ -83,14 +126,17 @@ h2{
             color: white;
             font-weight:bolder;
         }
-        .paddone{
-            padding-top: 40px;
+        
+         h2{
             text-align: center;
-        }
+            text-transform: uppercase;
+            padding: 10px;
+         }
         .grigio{
             background-color:rgb(173, 172, 172);
             padding-top: 10px;
-            padding-bottom: 10px
+                    padding-left: 10px;
+            margin:10px
             ;
         }
 /* MAIN */
