@@ -13,32 +13,30 @@ body{
     padding: 15px;
     margin-top: 20px;
     margin-bottom: 20px;
+    border:#979797 solid 1px;
 }   
 
 
 /* HEADER */
-.testa{
+header{
     padding: 30px;
-    background-image:linear-gradient(180deg, rgba(0,160,198,1) 0%, rgba(3,109,134,1) 68%)
-}
-.logo{
+    background-image:linear-gradient(180deg, rgba(0,160,198,1) 0%, rgba(3,109,134,1) 68%);
     text-align: center;
-}
-
-.font-head{
     text-transform:uppercase;
     font-weight: bolder;
     color: white;
     padding-top: 20px;
-    text-align: center;
     
     ;
     }
-
-       .font-head a {
-        color: white;
-        text-decoration: none;
-       }
+    header a {
+    color: white;
+    text-decoration: none;
+    }
+    header nav li {
+        list-style: none;
+        
+    }
 h1,h2,h3{
     font-family:'poppins',sans-serif;
     font-weight:700;
@@ -61,6 +59,11 @@ h1,h2,h3{
     color: rgba(0, 0, 0, 0.4);
     text-align: center;
     margin-top: 1rem;}
+
+ .sfondogrigio{
+    background-color: rgb(163, 163, 163);
+    border-radius: 10%;
+ }
     
     ul:not(#menu){
     list-style-type:disc;
@@ -110,7 +113,8 @@ h1,h2,h3{
             text-align: center;
             padding-top: 10px;
             padding-bottom: 10px;
-            margin: 15px;
+            margin-top: 15px;
+            border:#979797 solid 1px ;
         }
         .input{
             border-bottom: 1px ;
@@ -127,17 +131,29 @@ h1,h2,h3{
             font-weight:bolder;
         }
         
+        .data{
+            text-align: right;
+        }
+        
          h2{
             text-align: center;
             text-transform: uppercase;
             padding: 10px;
          }
         .grigio{
-            background-color:rgb(173, 172, 172);
+            background-color:#ccc;
             padding-top: 10px;
-                    padding-left: 10px;
-            margin:10px
-            ;
+            padding-left: 10px;
+            margin-top:10px;
+            border: #979797 solid 1px;
+        }
+
+        .footer{
+            background: linear-gradient(180.3deg, rgb(11, 132, 145)5.5%, rgb(0,0,0) 91.1%);
+            text-align: center;
+            padding-top: 20px;
+            color: white;
+            padding-bottom: 20px;
         }
 /* MAIN */
 

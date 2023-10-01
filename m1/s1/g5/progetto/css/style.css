@@ -102,6 +102,11 @@ h3{
 .piccolo{
     font-size: small;
 }
+
+aside{
+    padding: 40px;
+}
+
 h2{
     color: white;
     font-family:'montserrat';
