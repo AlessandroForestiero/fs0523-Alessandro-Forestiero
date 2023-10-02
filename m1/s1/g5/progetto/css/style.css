@@ -104,9 +104,14 @@ h3{
 }
 
 aside{
-    padding: 40px;
+    padding: 20px;
 }
 
+.bordo{
+    width:min-content;
+    border:#dee1e3 solid 1px;
+    margin-bottom: 20px;
+}
 h2{
     color: white;
     font-family:'montserrat';
@@ -116,20 +121,6 @@ h2{
     padding-bottom: 30px;
 }
 
-.margine{
-    
-    height: 100%;
-    background-size:contain;
-    border: #dee1e3 solid 1px;
-    width: fit-content;
-    text-align: center;
-    padding-right: 20px;
-    padding-top:50px;
-    padding-left: 15px;
-}
-.bordo{
-border: #dee1e3 solid 1px;
-}
 footer {
     color: #c8e7f0;
     background-color: #25a2c3;
