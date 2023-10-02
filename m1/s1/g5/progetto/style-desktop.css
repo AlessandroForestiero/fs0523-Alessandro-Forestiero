@@ -1,0 +1,145 @@
+header{
+    text-align: center;
+    background-color: black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+   
+}
+#logo{
+    width:20vw;
+    height:20vw;
+}
+.sfondo{
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    text-align: center;
+    padding-top:50px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom:50px;
+    
+}
+.button{
+    padding-top:40px;
+}
+
+section a {
+    
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    background-color: #f04c2f;
+    font-family: 'montserrat';
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    border-radius: 8%;
+}
+body  {
+    font-family: 'Open Sans', sans-serif;
+    font-weight:300;
+    font-size:1.2rem;
+    line-height:1.65;
+    color: #393d41;
+    text-align: center;
+}
+h1,h3,h4,h5,h5 {
+    font-family:'montserrat';
+    font-weight:600;
+    font-size:2.5rem;
+    line-height:1.5;
+    color:#25a2c3;
+}
+
+h3{
+    font-family:'montserrat';
+    font-weight: 600;
+    font-size:1rem;
+    padding-top: 15px;
+}
+
+.space{
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+section{
+    display:inline;
+}
+.tondo{
+    width:20%;
+    border-radius: 50%;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+.arancio{
+    width:100%;
+    background-color: #e22d0e;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+}
+    .mario{
+        font-style: italic;
+   
+
+    }
+
+    .mariodue{
+        padding-top: 20px;
+        text-transform:capitalize;
+        font-weight:600;
+    }
+.piccolo{
+    font-size: small;
+}
+
+aside{
+    padding: 20px;
+}
+
+.bordo{
+    width:min-content;
+    border:#dee1e3 solid 1px;
+    margin-bottom: 20px;
+}
+h2{
+    color: white;
+    font-family:'montserrat';
+    font-weight:600;
+    font-size:2.5rem;
+    line-height:1.5;
+    padding-bottom: 30px;
+}
+
+footer {
+    color: #c8e7f0;
+    background-color: #25a2c3;
+    margin-top:100px;
+}
+ 
+footer>h1{
+    color: white;
+}
+footer a{
+    color: #c8e7f0;
+}
+footer{
+    padding: 30px;
+    padding-bottom:80px;
+    }
+    #nopunti{
+        list-style-type:none;
+    }
+ .bar{
+    width: 200px;
+ }
+ 
+ .inline{
+    display: inline;
+ }

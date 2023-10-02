@@ -65,8 +65,8 @@ let nome1='john'
 let nome2='John'
  console.log(nome1==nome2)
 
-  nome1='John'
+  nome1='john'
   nome2='John'
- console.log(nome1==nome2)
+ console.log(nome1.toLowerCase==nome2.toLowerCase)
 
 
