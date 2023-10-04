@@ -2,8 +2,8 @@
  Scrivi un algoritmo per trovare il più grande tra due numeri interi.
 
    
-   x=10,
-   y=20
+   let x=10,
+   let y=20
   if(x>y){
     console.log(x);
   }
