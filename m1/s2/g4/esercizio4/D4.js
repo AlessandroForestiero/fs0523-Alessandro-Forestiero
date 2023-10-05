@@ -3,9 +3,9 @@
 */
 
 function area(l1, l2) {
-  console.log(" l area del rettangolo è uguale a : " + l1 * l2);
+  return l1*l2
 }
-area(5, 6);
+console.log(area(5, 6))
 
 /* ESERCIZIO 2
  Scrivi una funzione di nome "crazySum", che riceve due numeri interi come parametri.
