@@ -1,0 +1,116 @@
+html {
+  width: 100%;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+}
+p{
+    font-size: 16px;
+}
+ 
+.testa {
+  background-color: #222f3f;
+}
+.logo {
+  padding-left: 15px;
+  padding-top: 3px;
+}
+#menu {
+  padding-bottom: 8px;
+  padding-top: 8px;
+  background-color: #364757;
+}
+
+#menu li {
+  display: inline;
+  font-size: 16px;
+  padding-left: 15px;
+}
+
+#menu a {
+  text-decoration: none;
+  color: white;
+  padding-left: 10px;
+}
+#mainpad {
+  box-sizing: border-box;
+  padding: 15px;
+  text-align: center;
+  font-size: 10px;
+  background-color: #e9eeed;
+  width: 100%;
+}
+
+.arancio {
+  background-color: #f56600;
+  color: white;
+  font-size: 2rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.bianco{
+    background-color: white;
+    text-align:left ;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-weight: bolder;
+}
+.holiday {
+  color: white;
+  background-image: url(../images/bg-image.png);
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-bottom: 20px;
+}
+
+.holiday h1 {
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+#linea {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  column-gap: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.flex {
+  border-radius: 10%;
+  max-width: 200px;
+  max-height: 300px;
+  object-fit: fill;
+  overflow: hidden;
+}
+.margini-immagini {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.flex img {
+  width: 100%;
+  height: 100%;
+}
+
+.footeruno{
+    text-align: center;
+    background-color:#364757 ;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+footer a{
+    color: white;
+}
+.footerdue{
+    text-align: center;
+    background-color:#222f3f ;
+    padding: 50px;
+}
