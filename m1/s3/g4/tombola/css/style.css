@@ -1,0 +1,33 @@
+.tabellone {
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+    width: 700px;
+}
+.numero {
+  font-size: 2em;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+  flex:0 0 50px ;
+  text-align: center;
+  height: 50px;
+}
+.bottone{
+   
+    font-size: 1.5em;
+}
+.casellaRandom{
+    display:inline-block;
+    font-size: 2em;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+
+}
+.numeroTrovato{
+    background-color: orangered;
+}
