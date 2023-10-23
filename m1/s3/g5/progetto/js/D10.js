@@ -360,35 +360,83 @@ console.log(onlyTheYears());
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
 
-function onlyInLastMillennium(){
- let array=[]
- movies.forEach((movie)=>{
-  if(movie.Year>=1000 && movie.Year <=1999){
-    array.push(movie)
-  }
-
-
- });return array
+function onlyInLastMillennium() {
+  let array = [];
+  movies.forEach((movie) => {
+    if (movie.Year >= 1000 && movie.Year <= 1999) {
+      array.push(movie);
+    }
+  });
+  return array;
 }
 
-console.log(onlyInLastMillennium())
+console.log(onlyInLastMillennium());
 
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
 
+function sumAlltheYears() {
+  let sum = 0;
+
+  movies.forEach((movie) => {
+    sum += parseInt(movie.Year);
+  });
+  return sum;
+}
+console.log(sumAlltheYears());
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
+
+function searchByTitle(searchString) {
+  let matches = [];
+  movies.forEach((movie) => {
+    let contiene = movie.Title.includes(searchString);
+    if (contiene) {
+      matches.push(movie);
+    }
+  });
+  return matches;
+}
+
+console.log(searchByTitle("Avengers"));
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
 
+function searchAndDivide(searchString) {
+  let match = [];
+  let unmatch = [];
+  movies.forEach((movie) => {
+    let contiene = movie.Title.includes(searchString);
+    if (contiene) {
+      match.push(movie);
+    } else {
+      unmatch.push(movie);
+    }
+  });
+  let oggetto = {
+    match: match,
+    unmatch: unmatch,
+  };
+  return oggetto;
+}
+let r = searchAndDivide("Avengers");
+console.log(r.match);
+console.log(r.unmatch);
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
+
+function removeIndex(num) {
+  let copia = [...movies];
+  copia.splice(num, 1);
+  return copia;
+}
+console.log(removeIndex(3));
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
@@ -478,6 +526,22 @@ classe();
 
 */
 
+function halfTree(altezza) {
+  let linea = "";
+  for (let i = 0; i < altezza; i++) {
+    linea += "*";
+    console.log(linea);
+  }
+}
+halfTree(3);
+
+function halfTree(altezza) {
+  for (let i = 0; i < altezza; i++) {
+    console.log("*".repeat(i + 1));
+  }
+}
+halfTree(3);
+
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -490,8 +554,38 @@ classe();
 
 */
 
+function tree(altezza) {
+  for (let i = 0; i < altezza; i++) {
+    nasterischi = 1 + i * 2;
+    nspazi = altezza - 1 - i;
+    let linea = " ".repeat(nspazi);
+    linea = linea + "*".repeat(nasterischi);
+    console.log(linea);
+  }
+}
+tree(3);
+
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
+
+function isItPrime(n) {
+  if (n == 0 || n == 1) {
+    return false;
+  } else if (n == 2) {
+    return true;
+  } else {
+    for (i = 2; i < n; i++) {
+
+      if(n%i==0){
+        return false
+      }
+    }
+    return true
+  }
+}
+console.log(isItPrime(3));
+console.log(isItPrime(17));
+console.log(isItPrime(6));
