@@ -1,0 +1,32 @@
+.flex-menu {
+  display: flex;
+  justify-content: space-between;
+  
+  max-width: 800px;
+  background-color: darkkhaki;
+  border-radius: 2em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.menu-buttons{
+    margin: 8px;
+    flex-basis: 15%;
+    padding:10px 0;
+    background-color: darkgoldenrod;
+    border-radius: 2em;
+    border: none;
+}
+.menu-buttons-shop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkgoldenrod;
+    border-radius: 2em;
+    border: none;
+    flex-grow: 1;
+}
+.menu-buttons-shop img{
+    max-width: 50px;
+    
+}
+    

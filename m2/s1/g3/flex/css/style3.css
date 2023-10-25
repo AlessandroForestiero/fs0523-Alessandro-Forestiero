@@ -1,0 +1,22 @@
+.flex-article{
+    display: flex;
+    padding: 20px;
+    background-color: goldenrod;
+    border-radius: 2em;
+    
+}
+.flex-article-img,.flex-article-text{
+flex-basis: 50%;
+border: 1px solid black;
+}
+.flex-article-img img{
+    width: 100%;
+}
+
+.flex-article-img{
+    object-fit: fill;
+}
+
+.flex-article-text{
+    padding: 20px;
+}
