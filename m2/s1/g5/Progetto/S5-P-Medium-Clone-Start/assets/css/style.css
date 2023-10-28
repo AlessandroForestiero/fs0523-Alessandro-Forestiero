@@ -140,6 +140,61 @@ h1 {
   font-size: 13px;
 }
 .main-article{
+  padding-top:40px;
   display: flex;
-  
+  justify-content: center;
+  border: 2px solid green;
+}
+.sub-article{
+  display: flex;
+  flex-direction: column;
+ 
+  border: 2px solid red;
+}
+.article{
+  display: flex;
+}
+.topics{
+  display: flex;
+  flex-grow: 1;
+}
+.post-article {
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+}
+.post {
+  display: flex;
+ 
+}
+.post-date{
+  padding-top: 5px;
+  font-size: 13px;
+}
+.post h3{
+  font-weight: bold;
+  font-size: 18px;
+}
+.subtitle{
+  font-size: 13px;
+}
+.topics{
+  column-gap: 20px;
+  row-gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 33%;
+}
+.align-article{
+  column-gap: 50px;
+  display: flex;
+  max-width: 1192px;
+}
+.topic-pill{
+  font-size: 14px;
+  color: black;
+  border-radius: 2em;
+  background-color:#F2F2F2;
+  text-decoration: none;
+  padding: 12px;
 }
