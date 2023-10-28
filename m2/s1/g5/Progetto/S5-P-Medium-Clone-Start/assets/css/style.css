@@ -64,13 +64,13 @@ body {
 .main-description-container {
   flex: 1;
   max-width: 1192px;
-  border: 3px solid red;
+  /*border: 3px solid red;*/
 
   display: flex;
   align-items: center;
 }
 .main-description {
-  border: 3px solid green;
+  /*border: 3px solid green;*/
   display: flex;
   flex-direction: column;
   row-gap: 50px;
@@ -90,7 +90,11 @@ h1 {
 .main-description p {
   font-size: 1.7em;
 }
-
+.section-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .trending-container {
   max-width: 1192px;
   padding-top: 40px;
@@ -100,7 +104,6 @@ h1 {
   justify-content: center;
   row-gap: 30px;
   column-gap: 5px;
-  padding-left: 150px;
   padding-top: 50px;
   border-bottom:1px solid rgb(184, 183, 183);
   padding-bottom:50px;
@@ -146,13 +149,13 @@ h1 {
   padding-top:40px;
   display: flex;
   justify-content: center;
-  border: 2px solid green;
+ /*border: 2px solid green;*/
 }
 .sub-article{
   display: flex;
   flex-direction: column;
  
-  border: 2px solid red;
+ /* border: 2px solid red;*/
 }
 .article{
   display: flex;
