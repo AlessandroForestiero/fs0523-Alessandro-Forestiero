@@ -154,6 +154,7 @@ h1 {
 .sub-article{
   display: flex;
   flex-direction: column;
+  row-gap: 40px;
  
  /* border: 2px solid red;*/
 }
@@ -187,8 +188,9 @@ h1 {
   color:#6B6B6B ;
 }
 .topics{
+  height: fit-content;
   column-gap: 20px;
-  row-gap: 20px;
+  row-gap:30px;
   display: flex;
   flex-wrap: wrap;
   flex-basis: 33%;
