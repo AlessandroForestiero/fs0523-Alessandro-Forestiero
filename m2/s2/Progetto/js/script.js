@@ -40,7 +40,7 @@ let carouselImg = {
     "new" : thumbnails.slice()
 }
 
-// distribuisci le icone in modo random ai tre carousel
+
 function shuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
@@ -56,7 +56,7 @@ shuffleArray(carouselImg.new);
 
 function getMediaBreakpoints() {
     let imgHeight = window.innerWidth / 11;
-    let spacing = 10; // spazio fra le immagini (in pixels)
+    let spacing = 10;
     
     if (window.innerWidth < 800) {
         imgHeight = window.innerWidth / 9; 
@@ -65,12 +65,12 @@ function getMediaBreakpoints() {
     
     return {
         "imgHeight" : imgHeight,
-        "imgWidth" : imgHeight * 2, // semplifichiamo: le immagini originali sono sempre in rapporto 2 a 1
+        "imgWidth" : imgHeight * 2, 
         "spacing" : spacing
     }
 }
 
-// crea una 'slide' del carousel
+
 function creaCarouselItem(carouselInner, images, imgFirst, imgLast, isActiveItem) {
     const item = document.createElement("div");
     item.classList.add("carousel-item");
@@ -95,7 +95,7 @@ function svuotaCarousel(section) {
     }
 }
 
-function popolaCarousel(section) { // section = 'trending' etc.
+function popolaCarousel(section) { 
     svuotaCarousel(section);
 
     const carouselInner = document.querySelector("." + section + " .carousel-inner");
