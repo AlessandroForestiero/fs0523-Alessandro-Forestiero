@@ -1,0 +1,135 @@
+body{
+  background-color:#141414 !important ;
+}
+.title{
+  color: white !important;
+  font-size: 3vw ;
+}
+.nav-sizes {
+  font-size: 12px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+}
+.icons-color {
+  color: white;
+}
+
+
+.genres-form{
+  background-color: black;
+  color: white;
+  font-size: 1.5vw;
+  padding:0px 10px
+}
+.row-title {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
+  font-size: 2vw;
+}
+.carousel-inner {
+  white-space: nowrap; 
+}
+
+.carousel-inner img {
+  height: calc(100vw / 11); 
+  object-fit: cover; /* aspect ratio */
+  margin-right: 10px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.slider:not(:first-child) {
+  margin-top: calc(100vw / 80);
+}
+
+.slider h2 {
+  font-size: calc(100vw / 50);
+  color: white;
+}
+.row-space{
+  height: 6vw;
+}
+.container.footer{
+  width: 50%;
+}
+.footer{
+    
+    margin-top:7vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1vw;
+}
+.footer svg{
+    opacity: 0.5;
+    color: white;
+    
+}
+.footer a{
+  color:white;
+  opacity: 0.5;
+  text-decoration: none;
+}
+#service-button{
+  font-size: 1vw;
+  border: 1px solid #808080 ;
+  padding:5px 5px;
+}
+footer p{
+  color: #808080;
+}
+
+.brands{
+  color: #808080;
+  font-size: 2em;
+}
+@media screen and (max-width: 576px) {
+  .carousel-inner img{
+    height: calc(100vw / 4);
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .carousel-inner img{
+    height: calc(100vw / 5);
+  }
+
+
+}
+
+@media screen and (min-width: 768px) {
+  .carousel-inner img {
+    height: calc(100vw / 6);
+  }
+  
+  
+  }
+  @media screen and (min-width: 992px) {
+    .carousel-inner img {
+      height: calc(100vw / 8);
+    }
+    
+    
+    }
+  
+
+@media screen and (min-width: 1200px) {
+  
+  .carousel-inner img {
+    height: calc(100vw / 10);
+  }
+  
+}
+@media screen and (min-width: 1400px) {
+  
+  .carousel-inner img {
+    height: calc(100vw / 12);
+  }
+  
+  
+}
+
+

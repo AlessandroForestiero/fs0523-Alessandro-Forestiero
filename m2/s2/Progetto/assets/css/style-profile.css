@@ -1,0 +1,82 @@
+body{
+    background-color:#141414 !important ;
+}
+input[type=text]{
+    width: 80%;
+    color: white;
+    background-color:#666666 !important ;
+    border:0 ;
+}
+select{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    width: 30%;
+}
+button{
+    width:fit-content !important;
+    background-color:#141414 ;
+    color: grey;
+    border:1px solid grey ;
+    padding:.4em 1em;
+
+}
+button:focus{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+input[type=checkbox]{
+    width:2em;
+    height: 2em;
+    display: inline-block !important;
+    background-color: black !important;
+    color: grey !important;
+    border: #333 !important;
+    }
+  
+
+
+.separator{
+    border-bottom: 1px solid rgb(93, 93, 93) ;
+    
+}
+.profile-form{
+    width:50vw !important;
+    max-width: 800px !important;
+    font-size: 16px;
+}
+.rating{
+    font-weight: bold;
+    padding: 0 1em;
+    width:fit-content;
+    background-color: #333333;
+    color: white;
+}
+.heading{
+    color: #ccc;
+    font-size: 1.1em;
+}
+
+@media screen and (max-width:1024px) {
+    .profile-form{
+        width: 80vw !important;
+        
+    };
+}    
+@media screen and (max-width:768px) {
+    .profile-form{
+        width: 90vw !important;
+        max-width:100%;
+        font-size: 14px
+    };
+}    
+
+@media screen and (max-width:576px) {
+    .profile-form{
+        width: 100vw !important;
+        max-width:100%;
+        font-size: 12px
+        
+    };
+}    

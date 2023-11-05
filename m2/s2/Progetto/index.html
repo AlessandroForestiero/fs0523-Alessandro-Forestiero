@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg nav-sizes">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="assets/netflix_logo.png" width="80px" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active link-light" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-light" href="#">TV Shows</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-light" href="#">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-light" href="#">Recently Added</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-light" href="#">Mylist</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18px" fill="currentColor"
+                        class="bi bi-search me-3 icons-color" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                    <img src="assets/kids_icon.png" width="20px" height="20px" alt="kids" class="me-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16" fill="currentColor"
+                        class="bi bi-bell-fill me-3  icons-color" viewBox="0 0 16 16">
+                        <path
+                            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+                    </svg>
+                    <img src="assets/avatar.png" width="20px" height="20px" alt="avatar" class="me-3">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="d-flex align-items-center mt-2">
+
+            <h1 class="title">TV Shows</h1>
+
+            <form action="#" class="ms-3">
+
+                <select name="languages" id="lang" class="genres-form">
+                    <option value="genres">Genres</option>
+                    <option value="horror">Horror</option>
+                    <option value="anime">Anime</option>
+                    <option value="italiano">Italiano</option>
+
+                </select>
+            </form>
+        </div>
+
+        <section class="slider trending">
+            <h2>Trending</h2>
+            <div id="carousel-trending" class="carousel slide" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner">
+                </div>
+                <a class="carousel-control-prev" href="#carousel-trending" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-trending" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+        <section class="slider watch">
+            <h2>Watch it Again</h2>
+            <div id="carousel-watch" class="carousel slide" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner">
+                </div>
+                <a class="carousel-control-prev" href="#carousel-watch" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-watch" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="slider new">
+            <h2>New releases</h2>
+            <div id="carousel-new" class="carousel slide" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner">
+                </div>
+                <a class="carousel-control-prev" href="#carousel-new" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-new" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+
+
+    </div>
+
+    <footer class=" container footer">
+        <div class="row">
+            <div class="col-12 brands ">
+                <i class="fab fa-facebook-square ms-1"></i>
+                <i class="fab fa-instagram-square ms-1"></i>
+                <i class="fab fa-twitter ms-1"></i>
+                <i class="fab fa-youtube ms-1"></i>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-3">
+
+
+                <div> <a href="#">Audio and subtitles</a></div>
+                <div> <a href="#">Media Center</a></div>
+                <div> <a href="#">Privacy</a></div>
+                <div> <a href="#">Contact Us</a></div>
+            </div>
+            <div class="col-3">
+                <div> <a href="#">Audio descriptions</a></div>
+                <div> <a href="#">Investor Relations</a></div>
+                <div> <a href="#">Legal Notices</a></div>
+            </div>
+            <div class="col-3">
+                <div> <a href="#">Help Center</a></div>
+                <div> <a href="#">Jobs</a></div>
+                <div> <a href="#">Cockie Preferences</a></div>
+            </div>
+            <div class="col-3">
+                <div> <a href="#">Gift Crds</a></div>
+                <div> <a href="#">Terms of Use</a></div>
+                <div> <a href="#">Corporate informations</a></div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div>
+                        <a href="#" id="service-button">Service code</a>
+                    </div>
+                    <div class="col-12 mt-4"><p>@ 1997-2019 Netflix</p></div>
+                </div>
+            </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

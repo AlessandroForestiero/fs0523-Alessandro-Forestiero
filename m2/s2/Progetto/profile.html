@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style-profile.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="assets/netflix_logo.png" width="80px" alt="">
+
+    <div class="container  profile-form ps-0 pe-0">
+        <div class="container text-light">
+            <div class="row separator">
+                <div class="colpt-3 pb-3 ">
+                    <h1>Edit Profile</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 pt-3  pb-3 "><img src="assets/avatar.png" class="img-fluid" alt=""></div>
+                <div class="col-9 pt-3  pb-3  separator">
+                    <div class="d-flex flex-column">
+                        <input type="text" class="mb-4">
+
+                        <p class="mb-1 heading">Language:</p>
+
+
+                        <select name="languages" id="lang" class="genres-form">
+                            <option value="genres">English</option>
+                            <option value="horror">Italian</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 pt-3  pb-3 "></div>
+                <div class="col-9 ps-0 pt-3  pb-3  separator">
+                    <div class="d-flex flex-column">
+
+                        <p class="heading">Maturity Settings</p>
+
+
+                        <p class="rating">ALL MATURIRY RATINGS</p>
+
+
+                        <p>Show titles of all maturity ratings for this profile</p>
+
+                        <button>EDIT</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row separator">
+                <div class="col-3 pt-3  pb-3 "></div>
+                <div class="col-9 pt-3  pb-3 ">
+                    <div class="d-flex flex-column">
+                        <p class="heading">Autoplay controls</p>
+
+
+                        <div class="d-flex align-items-center column-gap-3"><input type="checkbox"><span>Autoplay next
+                                episode in a series on all devices.</span>
+                        </div>
+
+
+                        <div class="d-flex align-items-center column-gap-3"><input type="checkbox"><span>Autoplay
+                                previews while browsing on all devices.</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="d-flex column-gap-3  pt-3 pb-3">
+                    <button class="save-button">SAVE</button>
+                    <button>CANCEL</button>
+                    <button>DELETE PROFILE</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
