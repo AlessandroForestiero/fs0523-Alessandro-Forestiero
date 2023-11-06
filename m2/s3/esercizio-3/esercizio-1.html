@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        class User {
+            constructor(firstName, lastName, age, location) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.age = age;
+                this.location = location;
+            }
+            older(persona) {
+                if (this.age > persona.age) {  //this è l'oggetto che richiama il metodo " persona2.older(persona1)" older ha come parametro l'oggetto da confrontare
+                    return console.log(`il signor ${this.firstName + this.lastName} è più anziano `);
+                } else return console.log(`il signor ${persona.firstName + persona.lastName} è più anziano `);
+            }
+        }
+        let persona1 = new User("mario", "rossi", 23, "milano")
+        let persona2 = new User("antonio", "verde", 36, "roma")
+        let persona3 = new User("anto", "giallo", 40, "roma")
+        persona2.older(persona1)
+        persona3.older(persona2)
+
+    </script>
+</body>
+
+</html>

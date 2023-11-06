@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="pets-form">
+        <label for="pet-name">Pet Name:</label><br>
+        <input type="text" id="pet-name" name="pet-name"><br>
+        <label for="owner-name">Owner Name:</label><br>
+        <input type="text" id="owner-name" name="owner-name"><br><br>
+        <label for="species">Species:</label><br>
+        <input type="text" id="species" name="species"><br><br>
+        <label for="breed">Breed:</label><br>
+        <input type="text" id="breed" name="breed"><br><br>
+        <input type="submit" value="Submit" id="confirm">
+    </form>
+    <script>
+
+
+        let confirmButton = document.getElementById("confirm")
+        let listaPets = document.createElement("ul")
+        confirmButton.addEventListener("click", function (event) {
+            event.preventDefault()
+            let petsForm = document.getElementById("pets-form")
+            let tempPet = new Pet(petsForm.elements["pet-name"].value, petsForm.elements["owner-name"].value, petsForm.elements["species"].value, petsForm.elements["breed"].value)
+            let li = document.createElement('li')
+            li.innerText = tempPet.petName + " " + tempPet.ownerName + " " + tempPet.species + " " + tempPet.breed;
+            listaPets.append(li)
+            document.body.append(listaPets)
+        })
+
+
+
+
+        class Pet {
+            constructor(petName, ownerName, species, breed) {
+                this.petName = petName;
+                this.ownerName = ownerName;
+                this.species = species;
+                this.breed = breed
+            }
+            sameOwner(pet) {
+                if (this.ownerName === pet.ownerName) {
+                    return true;
+                } else return false;
+
+
+            }
+        }
+
+        let pet = new Pet("ciccio", "antonio", "cane", "nano")
+        let pet2 = new Pet("pippo", "luciano", "gatto", "siamese")
+        let pet3 = new Pet("roky", "federico,coniglio", "albino")
+        console.log(pet.sameOwner(pet));
+
+    </script>
+</body>
+
+</html>
