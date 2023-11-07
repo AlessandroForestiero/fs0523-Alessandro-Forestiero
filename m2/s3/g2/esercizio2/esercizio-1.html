@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form>
+    <input id="nome" name="nome" type="text">
+    <button id="save">Salva</button>
+    <button id="delete">Cancella</button>
+</form>
+    <script>
+        let nome=document.getElementById('nome')
+       let saveButton=document.getElementById('save');
+    let deleteButton=document.getElementById('delete')
+   
+    let nomeUtente = localStorage.getItem('utente')
+    if(nomeUtente){
+      let p = document.createElement('p')
+      p.innerText=nomeUtente;
+      document.body.append(p)
+    }
+    saveButton.addEventListener('click',function(){
+    localStorage.setItem('utente',nome.value)
+    })
+    deleteButton.addEventListener('click',function(){
+        localStorage.removeItem('utente')
+    })
+
+
+
+    </script>
+</body>
+</html>
