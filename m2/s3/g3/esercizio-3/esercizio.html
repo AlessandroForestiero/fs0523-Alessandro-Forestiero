@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <template id="card-template">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <div class="row">
+
+        </div>
+    </div>
+</body>
+
+<script>
+    let row = document.querySelector('.row')
+   
+
+    fetch('https://striveschool-api.herokuapp.com/books')
+        .then(res => res.json())
+        .then(libri => {
+            console.log(libri);
+            let cardTemplate = document.getElementById('card-template')
+            libri.forEach(libro => {
+                let clone = cardTemplate.content.cloneNode(true).children[0]
+                clone.querySelector('img').src = libro.img;
+                let p = clone.querySelectorAll('p');
+                p[0].innerText = 'Prezzo: ' + libro.price;
+                p[1].innerText = libro.title;
+
+                let deleteButton = clone.querySelector('.btn')
+                deleteButton.addEventListener('click', function () {
+                    clone.remove();
+
+                })
+                row.append(clone)
+
+
+
+
+            })
+        });
+
+</script>
+
+
+</html>
