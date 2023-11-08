@@ -21,6 +21,7 @@
                             card's content.</p>
                         <p class="card-text"></p>
                         <a class="btn btn-primary">Delete</a>
+                        <a class="buy btn btn-primary">Buy</a>
                     </div>
                 </div>
             </div>
@@ -28,12 +29,13 @@
         <div class="row">
 
         </div>
+        <ul></ul>
     </div>
 </body>
 
 <script>
     let row = document.querySelector('.row')
-   
+
 
     fetch('https://striveschool-api.herokuapp.com/books')
         .then(res => res.json())
@@ -50,7 +52,21 @@
                 let deleteButton = clone.querySelector('.btn')
                 deleteButton.addEventListener('click', function () {
                     clone.remove();
-
+                })
+                let ul = document.getElementsByTagName('ul')[0]
+                let buyButton = clone.querySelector('.buy')
+                buyButton.addEventListener('click', function () {
+                    let li = document.createElement('li')
+                    li.innerText = libro.title
+                    let removeItem=document.createElement('button')
+                    removeItem.innerText="Elimina libro"
+                    removeItem.addEventListener('click',function(){
+                        li.remove()
+                        removeItem.remove()
+                    })
+                    ul.append(li)
+                    ul.append(removeItem)
+                    
                 })
                 row.append(clone)
 
