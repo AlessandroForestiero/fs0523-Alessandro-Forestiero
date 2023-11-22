@@ -1,4 +1,4 @@
-class Account {
+ class Account {
    balanceInit: number = 0;
   constructor(balanceInit: number) {
     this.balanceInit = balanceInit;
