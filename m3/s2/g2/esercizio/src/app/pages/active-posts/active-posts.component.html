@@ -1,22 +1,5 @@
+<app-post [post]="post" *ngFor="let post of postAttivi">
+  <button (click)="postService.updatePost(post.id)" class="btn btn-primary">disattiva</button>
+</app-post>
 
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>#</th>
-
-      <th>titolo</th>
-      <th>body</th>
-      <th>disponibile</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let post of postAttivi; let i = index">
-      <td>{{i + 1}}</td>
-      <td>{{post.title}}</td>
-      <td>{{post.body}}</td>
-      <td>{{post.active}}</td>
-
-    </tr>
-  </tbody>
-</table>

@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ActivePostsComponent } from './pages/active-posts/active-posts.component';
 import { InactivePostsComponent } from './pages/inactive-posts/inactive-posts.component';
+import { PostComponent } from './pages/post/post.component';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { InactivePostsComponent } from './pages/inactive-posts/inactive-posts.co
     AppComponent,
     ActivePostsComponent,
     InactivePostsComponent,
+    PostComponent,
   ],
   imports: [
     BrowserModule,

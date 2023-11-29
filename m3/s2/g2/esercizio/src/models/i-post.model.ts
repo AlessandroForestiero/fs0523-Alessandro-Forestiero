@@ -4,4 +4,5 @@ export interface IPost {
   body: string;
   title: string;
   active: boolean;
+  type:string;
 }

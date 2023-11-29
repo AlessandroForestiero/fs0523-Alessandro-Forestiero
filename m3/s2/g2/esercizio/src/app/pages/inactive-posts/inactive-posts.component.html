@@ -1,6 +1,3 @@
-<div *ngFor="let post of postInattivi">
-  <p>{{post.id}}</p>
-  <p>{{post.title}}</p>
-  <p>{{post.body}}</p>
-  <p>{{post.active}}</p>
-</div>
+<app-post [post]="post" *ngFor="let post of postInattivi">
+  <button (click)="postService.updatePost(post.id)" class="btn btn-primary">disattiva</button>
+</app-post>
