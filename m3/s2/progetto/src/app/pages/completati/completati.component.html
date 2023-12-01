@@ -1,0 +1,8 @@
+<div *ngIf="loading">
+  Loading...
+</div>
+<div *ngFor="let todo of todos">
+  <p>{{todo.title}}</p>
+  <button (click)="delete(todo.id)">Elimina</button>
+
+</div>
