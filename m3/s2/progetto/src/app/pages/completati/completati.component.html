@@ -1,8 +1,11 @@
-<div *ngIf="loading">
-  Loading...
-</div>
 <div *ngFor="let todo of todos">
+
   <p>{{todo.title}}</p>
-  <button (click)="delete(todo.id)">Elimina</button>
+
+
 
 </div>
+
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="ball-scale-multiple" [fullScreen]="true">
+<p [innerHTML]="loadingtext"></p>
+</ngx-spinner>

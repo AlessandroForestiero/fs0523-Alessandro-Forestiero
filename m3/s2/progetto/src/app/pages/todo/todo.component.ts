@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { TodoService } from '../../services/todo.service';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-todo',
@@ -11,62 +12,74 @@ import { Router } from '@angular/router';
 })
 export class TodoComponent implements OnInit {
   public todos: Todo[] = [];
-  constructor(private todoSvc: TodoService, private router: Router) {}
-  public loading: boolean = false;
+  constructor(private todoSvc: TodoService, private router: Router,private spinner:NgxSpinnerService) {}
+
+  public loadingtext: string = 'Loading';
+
   ngOnInit(): void {
-    this.loading = true;
+    this.loadAll();
+  }
+
+  loadAll() {
+    this.spinner.show()
+    this.loadingtext = 'Loading..';
     setTimeout(() => {
       this.todoSvc
         .getAll()
+        .then((res) => {
+          this.spinner.hide()
+          return res;
+        })
         .then(
           (res) => (this.todos = res.filter((todo) => todo.completed == false))
         );
 
-      this.loading = false;
+
     }, 2000);
   }
-
-  newTodo: Partial<Todo> = {
-    id: 1,
-    title: 'prova',
-    completed: false,
-  };
 
   save(myForm: NgForm) {
-    this.newTodo.title = myForm.value.title;
-    this.newTodo.id = Math.floor(Math.random() * 500);
-    this.todoSvc.addTodo(this.newTodo);
-    this.loading = true;
+    let newTodo: Todo = {
+      id: Math.floor(Math.random() * 500),
+      title: myForm.value.title,
+      completed: false,
+    };
+    this.spinner.show()
+    this.loadingtext = 'Saving..';
     setTimeout(() => {
-      this.todoSvc
-        .getAll()
-        .then(
-          (res) => (this.todos = res.filter((todo) => todo.completed == false))
-        );
+      this.todoSvc.addTodo(newTodo).then(() => {
 
-      this.loading = false;
+
+        this.loadAll();
+      });
     }, 2000);
   }
-  delete(id: number | undefined) {
+  delete(id: number) {
     if (!id) return;
 
-    this.loading = true;
+    this.spinner.show()
+    this.loadingtext = 'Deleting..';
     setTimeout(() => {
       this.todoSvc.delete(id).then((res) => {
         this.todos = this.todos.filter((t) => t.id != id);
       });
 
-      this.loading = false;
+      this.loadAll();
     }, 2000);
   }
 
   complete(todo: Todo) {
+    this.spinner.show()
+    this.loadingtext = 'Done..';
     todo.completed = true;
+    setTimeout(() => {
     this.todoSvc.update(todo);
     this.todoSvc
       .getAll()
       .then(
         (res) => (this.todos = res.filter((todo) => todo.completed == false))
-      );
-  }
-}
+    );
+
+      this.loadAll();
+  },2000);
+}}

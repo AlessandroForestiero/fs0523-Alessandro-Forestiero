@@ -1,0 +1,18 @@
+nav a{
+  text-decoration: none;
+  padding-right: 20px;
+  font-weight: bolder;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+nav{
+  text-align: center;
+}
+nav a:visited{
+  color: black;
+}
+nav a:hover{
+  color:purple;
+}
+nav a:focus{
+  color: purple;
+}

@@ -1,13 +1,18 @@
 <form #myform="ngForm" (ngSubmit)="save(myform)">
-  <input type="text" required placeholder="title" name="title" ngModel>
-  <button>crea todo</button>
+  <input type="text" required placeholder="Aggiungi todo" name="title" ngModel>
+  <button>Crea todo</button>
 
 </form>
-<div *ngIf="loading">
-  Loading...
-</div>
-<div *ngFor="let todo of todos">
-  <p>{{todo.title}}</p>
+
+
+<div class="todo" *ngFor="let todo of todos">
+  <span class="title">{{todo.title}}</span>
   <button (click)="delete(todo.id)">Elimina</button>
   <button (click)="complete({id:todo.id,title:todo.title,completed:todo.completed})">Fatto</button>
 </div>
+
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="ball-scale-multiple" [fullScreen]="true">
+
+  <p [innerHTML]="loadingtext"></p>
+</ngx-spinner>
+

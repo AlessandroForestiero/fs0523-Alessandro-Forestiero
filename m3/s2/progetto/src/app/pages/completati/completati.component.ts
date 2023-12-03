@@ -3,7 +3,7 @@ import { promises } from 'dns';
 import { Todo } from '../../models/todo.model';
 import { TodoService } from '../../services/todo.service';
 import { Router } from '@angular/router';
-import { NgForm } from '@angular/forms';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-completati',
@@ -12,13 +12,19 @@ import { NgForm } from '@angular/forms';
 })
 export class CompletatiComponent {
   public todos: Todo[] = [];
-  constructor(private todoSvc: TodoService, private router: Router) {}
+  constructor(private todoSvc: TodoService, private router: Router,private spinner:NgxSpinnerService) {}
   public loading: boolean = true;
+  public loadingtext: string = 'Loading';
   ngOnInit(): void {
-    this.loading = true;
+    this.spinner.show()
+    this.loadingtext = 'Completed..';
     setTimeout(() => {
       this.todoSvc
         .getAll()
+        .then((res) => {
+          this.spinner.hide()
+          return res;
+        })
         .then(
           (res) => (this.todos = res.filter((todo) => todo.completed == true))
         );
@@ -27,13 +33,5 @@ export class CompletatiComponent {
     }, 2000);
   }
 
-  delete(id: number | undefined) {
-    if (!id) return;
 
-    this.todoSvc.delete(id).then((res) => {
-      this.todos = this.todos.filter((t) => t.id != id);
-
-      alert(`todo con id ${id} eliminata`);
-    });
-  }
 }
