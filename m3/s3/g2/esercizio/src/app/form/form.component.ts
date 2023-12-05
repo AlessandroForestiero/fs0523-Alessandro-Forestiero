@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -45,4 +45,12 @@ send(){
   console.log(this.form.value);
 
 }
+
+inviaForm(myform:NgForm){
+  console.log(myform.value);
+
 }
+
+}
+
+

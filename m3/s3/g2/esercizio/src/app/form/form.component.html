@@ -15,3 +15,8 @@
     <input type="text" class="form-control" formControlName="username" placeholder="inserisci username">
     <button (click)="send()" [disabled]="!form.valid">Invia</button>
   </form>
+<form #myform="ngForm">
+  <input type="text" class="form-control" name="nome" placeholder="il tuo nome" ngModel>
+  <input type="password" class="form-control" name="password" placeholder="la tua password" ngModel>
+  <button (click)="inviaForm(myform)">Invia</button>
+</form>
