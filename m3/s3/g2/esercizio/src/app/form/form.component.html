@@ -1,0 +1,17 @@
+<form [formGroup]="form">
+    <input type="text" class="form-control" formControlName="nome" placeholder="il tuo nome">
+
+    <input type="text" class="form-control" formControlName="cognome" placeholder="il tuo cognome">
+    <input type="password" formControlName="password" placeholder="scrivi la password">
+    <input type="password" formControlName="confermaPassword" placeholder="conferma password">
+    <select class="form-select" aria-label="Default select example" placeholder="genere" formControlName="genere">
+      <option selected value="">Open this select menu</option>
+      <option value="1">Uomo</option>
+      <option value="2">Donna</option>
+      <option value="3">Non definito</option>
+    </select>
+    <input type="text" class="form-control" formControlName="img" placeholder="inserisci immagine profilo">
+    <input type="text" class="form-control" formControlName="bio" placeholder="inserisci biografia">
+    <input type="text" class="form-control" formControlName="username" placeholder="inserisci username">
+    <button (click)="send()" [disabled]="!form.valid">Invia</button>
+  </form>
