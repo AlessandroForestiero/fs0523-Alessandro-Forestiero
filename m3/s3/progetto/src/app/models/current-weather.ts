@@ -1,0 +1,6 @@
+export interface CurrentWeather {
+  description:string;
+  icon: string;
+  id: number;
+  main: string;
+}
