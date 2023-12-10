@@ -1,81 +1,38 @@
-import { HourlyForecast } from './models/wheather';
-import { DailyForecast } from './models/daily-forecast';
-import { Component, OnInit } from '@angular/core';
-import { WheaterService } from './wheater.service';
-import { Latlon } from './models/latlon';
-import { CurrentWeather } from './models/current-weather';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
-})
-export class AppComponent implements OnInit {
-  latLon!: Latlon;
-  currentWeather: CurrentWeather[] = [];
-  dailyForecasts: DailyForecast[] = [];
-  nomeCitta:string = '';
-  hours: Date[] = [];
-  errore:string|null=null;
+ import { Component, OnInit } from '@angular/core';
+ import { WheaterService } from './wheater.service';
 
-  constructor(private weatherSvc: WheaterService) {}
+ import { iAccessData } from './models/i-access-data';
+ import { JwtHelperService } from '@auth0/angular-jwt';
 
-  ngOnInit(): void {}
+ @Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrl: './app.component.scss',
+ })
+ export class AppComponent implements OnInit {
+   jwtHelper: JwtHelperService = new JwtHelperService();
+   nomeUtente:string|null=null;
 
-  groupByDay(forecasts: HourlyForecast[]): DailyForecast[] {
-    let groups: DailyForecast[] = [];
-    let m: Map<number, DailyForecast> = new Map<number, DailyForecast>();
-    forecasts.forEach((hf) => {
-      let day: Date = new Date(hf.dt_txt);
-      day.setHours(0, 0, 0);
-      if (m.has(day.getTime())) {
-        let df: DailyForecast | undefined = m.get(day.getTime());
-        df?.hourlyForecasts.push(hf);
-      } else {
-        let df: DailyForecast = new DailyForecast(day);
-        df.hourlyForecasts.push(hf);
-        m.set(day.getTime(), df);
-        groups.push(df);
-      }
-    });
-    return groups;
-  }
 
-  caricaDati() {
-    this.dailyForecasts = [];
-    this.hours = [];
-    this.errore=null;
-    this.weatherSvc.getLatLonByCity(this.nomeCitta).subscribe((r) => {
-      if (r != null) {
-        this.latLon = r;
-        this.weatherSvc
-          .getWeatherByLatLon(this.latLon.latitudine, this.latLon.longitudine)
-          .subscribe((r: HourlyForecast[]) => {
-            this.dailyForecasts = this.groupByDay(r);
+   constructor(private weatherSvc: WheaterService) {}
 
-            this.hours = this.dailyForecasts[1].hourlyForecasts.map(
-              (hf) => new Date(hf.dt_txt)
-            );
+   ngOnInit(){
 
-            console.log(this.dailyForecasts);
-          });
-      }else {
-        this.errore='Città non trovata'
-      }
-    });
 
-    console.log(this.currentWeather);
-  }
-  getWeather(df: DailyForecast, h: Date): string | null {
-    for (let hf of df.hourlyForecasts) {
-      let hf_h = new Date(hf.dt_txt);
-      if (
-        hf_h.getHours() == h.getHours() &&
-        hf_h.getMinutes() == h.getMinutes()
-      ) {
-        return hf.weather[0].description;
-      }
-    }
-    return null;
-  }
-}
+
+    //  const userJson: string | null = localStorage.getItem('accessData');
+    // if (!userJson) return;
+
+    // const accessData: iAccessData = JSON.parse(userJson);
+    // if (this.jwtHelper.isTokenExpired(accessData.accessToken)) return;
+
+
+    //  this.nomeUtente=accessData.user.nome;
+
+   }
+
+   }
+
+
+

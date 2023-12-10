@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "email": "etutor11@promopa.it",
+      "password": "$2a$10$MNzqiF3d9KOQEmqDmIYgJ.kKZNIgvsNUR2ByXKGOwzll6SF/Fwu5W",
+      "nome": "Alessandro",
+      "id": 1
+    },
+    {
+      "email": "rdgdfdf@sfgsdgdsg.com",
+      "password": "$2a$10$d8lFMhXazThHmIVSl1m4R.fzREfpBs0fRIILky8yCMnQHaYwal5LK",
+      "nome": "Alessandro",
+      "id": 2
+    },
+    {
+      "email": "jgyjgyjf@sdgfsggg.com",
+      "password": "$2a$10$zU.2sWErWIP/IrDQPNgKBeQjPf1me/6P4yG4ePfI7scu.GXsIpUTW",
+      "nome": "Alessandro",
+      "id": 3
+    },
+    {
+      "email": "alessandromind94@gmail.com",
+      "password": "$2a$10$uaJdVlH0rmx5GSycWktSV.Ivu8Fhtmf3vqpJq7KTc.OPEKHDTch5e",
+      "nome": "Alessandro",
+      "id": 4
+    }
+  ]
+}
