@@ -17,17 +17,16 @@ export class AuthService {
   authSubject = new BehaviorSubject<iAccessData | null>(null);
 
   user$ = this.authSubject.asObservable();
-  isLoggedIn$ = this.user$.pipe(map((user: iAccessData | null) => !!user)); //fornisce true o false in base allo stato di autenticaziuone dell'utente
-  //isLoggedIn$ = this.user$.pipe(map(user => Boolean(user)))
+  isLoggedIn$ = this.user$.pipe(map((user: iAccessData | null) => !!user));
 
   constructor(
-    private http: HttpClient, //per le chiamate http
-    private router: Router //per i redirect
+    private http: HttpClient,
+    private router: Router
   ) {
-    this.restoreUser(); //come prima cosa controllo se è già attiva una sessione, e la ripristino
+    this.restoreUser();
   }
 
-  //ng g environment
+
   registerUrl: string = environment.apiUrl + '/register';
   loginUrl: string = environment.apiUrl + '/login';
 
@@ -56,22 +55,22 @@ export class AuthService {
   }
 
   logout() {
-    this.authSubject.next(null); //comunico al behaviorsubject che il valore da propagare è null
-    localStorage.removeItem('accessData'); //elimino i dati salvati in localstorage
-    this.router.navigate(['/auth/login']); //redirect al login
+    this.authSubject.next(null);
+    localStorage.removeItem('accessData');
+    this.router.navigate(['/auth/login']);
   }
 
-  //metodo che controlla al reload di pagina se l'utente è loggato e se il jwt è scaduto
+
   restoreUser() {
-    const userJson: string | null = localStorage.getItem('accessData'); //recupero i dati di accesso
-    if (!userJson) return; //se i dati non ci sono blocco la funzione
+    const userJson: string | null = localStorage.getItem('accessData');
+    if (!userJson) return;
 
-    const accessData: iAccessData = JSON.parse(userJson); //se viene eseguita questa riga significa che i dati ci sono, quindi converto la stringa(che conteneva un json) in oggetto
-    if (this.jwtHelper.isTokenExpired(accessData.accessToken)) return; //ora controllo se il token è scaduto, se lo è fermiamo la funzione
+    const accessData: iAccessData = JSON.parse(userJson);
+    if (this.jwtHelper.isTokenExpired(accessData.accessToken)) return;
 
-    //se nessun return viene eseguito proseguo
-    this.authSubject.next(accessData); //invio i dati dell'utente al behaviorsubject
-    this.autoLogout(accessData.accessToken); //riavvio il timer per la scadenza della sessione
+
+    this.authSubject.next(accessData);
+    this.autoLogout(accessData.accessToken);
   }
 
   errors(err: any) {
